@@ -1,6 +1,4 @@
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Exercise17_03 {
     public static void main(String[] args) throws IOException {
@@ -9,7 +7,7 @@ public class Exercise17_03 {
         // int的和可能超过int的范围
         try {
             while (true) sum += f.readInt();
-        } catch (IOException ignored) {
+        } catch (EOFException ignored) {
             System.out.println(sum);
         }
     }
