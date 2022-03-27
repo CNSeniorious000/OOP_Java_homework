@@ -1,3 +1,5 @@
+package com;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -13,7 +15,7 @@ public class PropertiesUtil {
          */
         properties = new Properties();
         //通过反射（输入流）接受数据库路径
-        InputStream inputStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("config.properties");
+        InputStream inputStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("com/config.properties");
         properties.load(inputStream);
     }
 
